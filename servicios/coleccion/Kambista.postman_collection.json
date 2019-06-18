@@ -1,0 +1,729 @@
+{
+	"info": {
+		"_postman_id": "076a1cd5-9668-464c-9c1a-93f61bf1b576",
+		"name": "Kambista",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Registrar Usuario Kambista",
+			"item": [
+				{
+					"name": "registro exitoso",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c5e9a86e-9395-4a8c-b6a7-55da92ea9088",
+								"exec": [
+									"var jsonData=JSON.parse(responseBody);",
+									"tests[\"POST Exitoso - Status 200\"] = responseCode.code === 200;",
+									"tests[\"POST Exitoso - Validacipón de 'code' en cuerpo de respuesta json\"] = jsonData.code===201;",
+									"tests[\"POST Exitoso - Validacipón de 'msg' en cuerpo de respuesta json\"] = jsonData.msg===\"SAVED\";"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"email\":\"juan.alvarezm@outlook.com\",\r\n\t\"password\":\"interbank\"\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "registro fallido - formato email invalido",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c5e9a86e-9395-4a8c-b6a7-55da92ea9088",
+								"exec": [
+									"var jsonData=JSON.parse(responseBody);",
+									"tests[\"POST Exitoso - Status 422\"] = responseCode.code === 422;",
+									"tests[\"POST Exitoso - Validacipón de 'code' en cuerpo de respuesta json\"] = jsonData.code===998;",
+									"tests[\"POST Exitoso - Validacipón de 'msg' en cuerpo de respuesta json\"] = jsonData.msg===\"INVALID\";"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"email\":\"juan.alvarezmoutlook.com\",\r\n\t\"password\":\"interbank\"\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "registro fallido - formato clave invalido",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c5e9a86e-9395-4a8c-b6a7-55da92ea9088",
+								"exec": [
+									"var jsonData=JSON.parse(responseBody);",
+									"tests[\"POST Exitoso - Status 422\"] = responseCode.code === 422;",
+									"tests[\"POST Exitoso - Validacipón de 'code' en cuerpo de respuesta json\"] = jsonData.code===998;",
+									"tests[\"POST Exitoso - Validacipón de 'msg' en cuerpo de respuesta json\"] = jsonData.msg===\"INVALID\";"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"email\":\"juan.alvarezm@outlook.com\",\r\n\t\"password\":\"inter\"\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "registro fallido - formato email y clave invalido",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c5e9a86e-9395-4a8c-b6a7-55da92ea9088",
+								"exec": [
+									"var jsonData=JSON.parse(responseBody);",
+									"tests[\"POST Exitoso - Status 422\"] = responseCode.code === 422;",
+									"tests[\"POST Exitoso - Validacipón de 'code' en cuerpo de respuesta json\"] = jsonData.code===998;",
+									"tests[\"POST Exitoso - Validacipón de 'msg' en cuerpo de respuesta json\"] = jsonData.msg===\"INVALID\";"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"email\":\"juan.alvoutlook.com\",\r\n\t\"password\":\"inter\"\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "registro fallido - falta email",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c5e9a86e-9395-4a8c-b6a7-55da92ea9088",
+								"exec": [
+									"var jsonData=JSON.parse(responseBody);",
+									"tests[\"POST Exitoso - Status 422\"] = responseCode.code === 422;",
+									"tests[\"POST Exitoso - Validacipón de 'code' en cuerpo de respuesta json\"] = jsonData.code===999;",
+									"tests[\"POST Exitoso - Validacipón de 'msg' en cuerpo de respuesta json\"] = jsonData.msg===\"REQUIRED\";"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"email\":\"\",\r\n\t\"password\":\"interbank\"\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "registro fallido - falta clave",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c5e9a86e-9395-4a8c-b6a7-55da92ea9088",
+								"exec": [
+									"var jsonData=JSON.parse(responseBody);",
+									"tests[\"POST Exitoso - Status 422\"] = responseCode.code === 422;",
+									"tests[\"POST Exitoso - Validacipón de 'code' en cuerpo de respuesta json\"] = jsonData.code===999;",
+									"tests[\"POST Exitoso - Validacipón de 'msg' en cuerpo de respuesta json\"] = jsonData.msg===\"REQUIRED\";"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"email\":\"juan.alvarezm@outlook.com\",\r\n\t\"password\":\"\"\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "registro fallido - falta email y clave",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c5e9a86e-9395-4a8c-b6a7-55da92ea9088",
+								"exec": [
+									"var jsonData=JSON.parse(responseBody);",
+									"tests[\"POST Exitoso - Status 422\"] = responseCode.code === 422;",
+									"tests[\"POST Exitoso - Validacipón de 'code' en cuerpo de respuesta json\"] = jsonData.code===999;",
+									"tests[\"POST Exitoso - Validacipón de 'msg' en cuerpo de respuesta json\"] = jsonData.msg===\"REQUIRED\";"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"email\":\"\",\r\n\t\"password\":\"\"\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "de9594c8-0b22-4db5-9b12-65a293e0ab10",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "d4808241-041c-4422-8812-a60b8fd2a2d9",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Login Usuario Kambista",
+			"item": [
+				{
+					"name": "login exitoso",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2cdfc0a1-d845-496d-ab58-9e5ce22a7f22",
+								"exec": [
+									"var jsonData=JSON.parse(responseBody);",
+									"tests[\"POST Exitoso - Status 200\"] = responseCode.code === 200;",
+									"tests[\"POST Exitoso - Validacipón de cuerpo de respuesta json\"] = jsonData.code===201;",
+									"tests[\"POST Exitoso - Validacipón de cuerpo de respuesta json\"] = jsonData.msg===\"LOGIN\";"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"email\":\"correo@kambista.com\",\r\n\t\"password\":\"password\"\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login fallido - email no se encuentra registrado",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "5c6fa2a4-e6b6-465e-89e2-9ad2a2d8ce89",
+								"exec": [
+									"var jsonData=JSON.parse(responseBody);",
+									"tests[\"POST Exitoso - Status 401\"] = responseCode.code === 401;",
+									"tests[\"POST Exitoso - Validacipón de 'code' en cuerpo de respuesta json\"] = jsonData.code===997;",
+									"tests[\"POST Exitoso - Validacipón de 'msg' en cuerpo de respuesta json\"] = jsonData.msg===\"INVALID\";"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"email\":\"correoww@kambista.com\",\r\n\t\"password\":\"password\"\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login fallido - clave incorrecta",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "5c6fa2a4-e6b6-465e-89e2-9ad2a2d8ce89",
+								"exec": [
+									"var jsonData=JSON.parse(responseBody);",
+									"tests[\"POST Exitoso - Status 401\"] = responseCode.code === 401;",
+									"tests[\"POST Exitoso - Validacipón de 'code' en cuerpo de respuesta json\"] = jsonData.code===997;",
+									"tests[\"POST Exitoso - Validacipón de 'msg' en cuerpo de respuesta json\"] = jsonData.msg===\"INVALID\";"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"email\":\"correo@kambista.com\",\r\n\t\"password\":\"password1\"\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login fallido - formato email invalido",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c5e9a86e-9395-4a8c-b6a7-55da92ea9088",
+								"exec": [
+									"var jsonData=JSON.parse(responseBody);",
+									"tests[\"POST Exitoso - Status 422\"] = responseCode.code === 401;",
+									"tests[\"POST Exitoso - Validacipón de 'code' en cuerpo de respuesta json\"] = jsonData.code===997;",
+									"tests[\"POST Exitoso - Validacipón de 'msg' en cuerpo de respuesta json\"] = jsonData.msg===\"INVALID\";"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\":\"correo@kambista..com\",\n\t\"password\":\"password\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login fallido - formato clave invalido",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c5e9a86e-9395-4a8c-b6a7-55da92ea9088",
+								"exec": [
+									"var jsonData=JSON.parse(responseBody);",
+									"tests[\"POST Exitoso - Status 422\"] = responseCode.code === 422;",
+									"tests[\"POST Exitoso - Validacipón de 'code' en cuerpo de respuesta json\"] = jsonData.code===998;",
+									"tests[\"POST Exitoso - Validacipón de 'msg' en cuerpo de respuesta json\"] = jsonData.msg===\"INVALID\";"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"email\":\"correo@kambista.com\",\r\n\t\"password\":\"der\"\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login fallido - formato email y clave invalido Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c5e9a86e-9395-4a8c-b6a7-55da92ea9088",
+								"exec": [
+									"var jsonData=JSON.parse(responseBody);",
+									"tests[\"POST Exitoso - Status 422\"] = responseCode.code === 422;",
+									"tests[\"POST Exitoso - Validacipón de 'code' en cuerpo de respuesta json\"] = jsonData.code===998;",
+									"tests[\"POST Exitoso - Validacipón de 'msg' en cuerpo de respuesta json\"] = jsonData.msg===\"INVALID\";"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\":\"correo@kambista..com\",\n\t\"password\":\"www\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login fallido - falta email",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c5e9a86e-9395-4a8c-b6a7-55da92ea9088",
+								"exec": [
+									"var jsonData=JSON.parse(responseBody);",
+									"tests[\"POST Exitoso - Status 422\"] = responseCode.code === 422;",
+									"tests[\"POST Exitoso - Validacipón de 'code' en cuerpo de respuesta json\"] = jsonData.code===999;",
+									"tests[\"POST Exitoso - Validacipón de 'msg' en cuerpo de respuesta json\"] = jsonData.msg===\"REQUIRED\";"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\":\"\",\n\t\"password\":\"password\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login fallido - falta clave",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c5e9a86e-9395-4a8c-b6a7-55da92ea9088",
+								"exec": [
+									"var jsonData=JSON.parse(responseBody);",
+									"tests[\"POST Exitoso - Status 422\"] = responseCode.code === 422;",
+									"tests[\"POST Exitoso - Validacipón de 'code' en cuerpo de respuesta json\"] = jsonData.code===999;",
+									"tests[\"POST Exitoso - Validacipón de 'msg' en cuerpo de respuesta json\"] = jsonData.msg===\"REQUIRED\";"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\":\"correo@kambista..com\",\n\t\"password\":\"\"\n}"
+						},
+						"url": {
+							"raw": "{{url}}/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login fallido - falta email y clave",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c5e9a86e-9395-4a8c-b6a7-55da92ea9088",
+								"exec": [
+									"var jsonData=JSON.parse(responseBody);",
+									"tests[\"POST Exitoso - Status 422\"] = responseCode.code === 422;",
+									"tests[\"POST Exitoso - Validacipón de 'code' en cuerpo de respuesta json\"] = jsonData.code===999;",
+									"tests[\"POST Exitoso - Validacipón de 'msg' en cuerpo de respuesta json\"] = jsonData.msg===\"REQUIRED\";"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"email\":\"\",\r\n\t\"password\":\"\"\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/register",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="7" passed="7">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="36013" started-at="2019-06-18T15:12:20Z" finished-at="2019-06-18T15:12:56Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="36013" started-at="2019-06-18T15:12:20Z" finished-at="2019-06-18T15:12:56Z">
+      <class name="job.kambista.training.test.KambistaTest">
+        <test-method status="PASS" signature="antes()[pri:0, instance:job.kambista.training.test.KambistaTest@5315b42e]" name="antes" is-config="true" duration-ms="4558" started-at="2019-06-18T15:12:20Z" finished-at="2019-06-18T15:12:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- antes -->
+        <test-method status="PASS" signature="registroCorrecto()[pri:1, instance:job.kambista.training.test.KambistaTest@5315b42e]" name="registroCorrecto" duration-ms="1277" started-at="2019-06-18T15:12:25Z" finished-at="2019-06-18T15:12:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registroCorrecto -->
+        <test-method status="PASS" signature="despues()[pri:0, instance:job.kambista.training.test.KambistaTest@5315b42e]" name="despues" is-config="true" duration-ms="56" started-at="2019-06-18T15:12:26Z" finished-at="2019-06-18T15:12:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- despues -->
+        <test-method status="PASS" signature="antes()[pri:0, instance:job.kambista.training.test.KambistaTest@5315b42e]" name="antes" is-config="true" duration-ms="3729" started-at="2019-06-18T15:12:26Z" finished-at="2019-06-18T15:12:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- antes -->
+        <test-method status="PASS" signature="emailInvalido()[pri:2, instance:job.kambista.training.test.KambistaTest@5315b42e]" name="emailInvalido" duration-ms="1225" started-at="2019-06-18T15:12:30Z" finished-at="2019-06-18T15:12:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- emailInvalido -->
+        <test-method status="PASS" signature="despues()[pri:0, instance:job.kambista.training.test.KambistaTest@5315b42e]" name="despues" is-config="true" duration-ms="47" started-at="2019-06-18T15:12:31Z" finished-at="2019-06-18T15:12:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- despues -->
+        <test-method status="PASS" signature="antes()[pri:0, instance:job.kambista.training.test.KambistaTest@5315b42e]" name="antes" is-config="true" duration-ms="3607" started-at="2019-06-18T15:12:31Z" finished-at="2019-06-18T15:12:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- antes -->
+        <test-method status="PASS" signature="claveInvalida()[pri:3, instance:job.kambista.training.test.KambistaTest@5315b42e]" name="claveInvalida" duration-ms="1209" started-at="2019-06-18T15:12:35Z" finished-at="2019-06-18T15:12:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- claveInvalida -->
+        <test-method status="PASS" signature="despues()[pri:0, instance:job.kambista.training.test.KambistaTest@5315b42e]" name="despues" is-config="true" duration-ms="50" started-at="2019-06-18T15:12:36Z" finished-at="2019-06-18T15:12:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- despues -->
+        <test-method status="PASS" signature="antes()[pri:0, instance:job.kambista.training.test.KambistaTest@5315b42e]" name="antes" is-config="true" duration-ms="3590" started-at="2019-06-18T15:12:36Z" finished-at="2019-06-18T15:12:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- antes -->
+        <test-method status="PASS" signature="emailAndClaveInvalida()[pri:4, instance:job.kambista.training.test.KambistaTest@5315b42e]" name="emailAndClaveInvalida" duration-ms="1226" started-at="2019-06-18T15:12:39Z" finished-at="2019-06-18T15:12:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- emailAndClaveInvalida -->
+        <test-method status="PASS" signature="despues()[pri:0, instance:job.kambista.training.test.KambistaTest@5315b42e]" name="despues" is-config="true" duration-ms="55" started-at="2019-06-18T15:12:41Z" finished-at="2019-06-18T15:12:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- despues -->
+        <test-method status="PASS" signature="antes()[pri:0, instance:job.kambista.training.test.KambistaTest@5315b42e]" name="antes" is-config="true" duration-ms="4284" started-at="2019-06-18T15:12:41Z" finished-at="2019-06-18T15:12:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- antes -->
+        <test-method status="PASS" signature="faltaEmail()[pri:5, instance:job.kambista.training.test.KambistaTest@5315b42e]" name="faltaEmail" duration-ms="1174" started-at="2019-06-18T15:12:45Z" finished-at="2019-06-18T15:12:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- faltaEmail -->
+        <test-method status="PASS" signature="despues()[pri:0, instance:job.kambista.training.test.KambistaTest@5315b42e]" name="despues" is-config="true" duration-ms="48" started-at="2019-06-18T15:12:46Z" finished-at="2019-06-18T15:12:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- despues -->
+        <test-method status="PASS" signature="antes()[pri:0, instance:job.kambista.training.test.KambistaTest@5315b42e]" name="antes" is-config="true" duration-ms="4002" started-at="2019-06-18T15:12:46Z" finished-at="2019-06-18T15:12:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- antes -->
+        <test-method status="PASS" signature="faltaClave()[pri:6, instance:job.kambista.training.test.KambistaTest@5315b42e]" name="faltaClave" duration-ms="1202" started-at="2019-06-18T15:12:50Z" finished-at="2019-06-18T15:12:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- faltaClave -->
+        <test-method status="PASS" signature="despues()[pri:0, instance:job.kambista.training.test.KambistaTest@5315b42e]" name="despues" is-config="true" duration-ms="50" started-at="2019-06-18T15:12:51Z" finished-at="2019-06-18T15:12:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- despues -->
+        <test-method status="PASS" signature="antes()[pri:0, instance:job.kambista.training.test.KambistaTest@5315b42e]" name="antes" is-config="true" duration-ms="3369" started-at="2019-06-18T15:12:51Z" finished-at="2019-06-18T15:12:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- antes -->
+        <test-method status="PASS" signature="faltaEmailAndClave()[pri:7, instance:job.kambista.training.test.KambistaTest@5315b42e]" name="faltaEmailAndClave" duration-ms="1174" started-at="2019-06-18T15:12:55Z" finished-at="2019-06-18T15:12:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- faltaEmailAndClave -->
+        <test-method status="PASS" signature="despues()[pri:0, instance:job.kambista.training.test.KambistaTest@5315b42e]" name="despues" is-config="true" duration-ms="53" started-at="2019-06-18T15:12:56Z" finished-at="2019-06-18T15:12:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- despues -->
+      </class> <!-- job.kambista.training.test.KambistaTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
